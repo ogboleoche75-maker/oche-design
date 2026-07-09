@@ -1,18 +1,3 @@
-const socials = [
-  {
-    label: "GitHub",
-    href: "https://github.com/ogboleoche75-maker",
-  },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/oche-ogbole-9933a9231/",
-  },
-  {
-    label: "Behance",
-    href: "https://www.behance.net/ocheogbole71",
-  },
-];
-
 export default function Contact() {
   return (
     <section id="contact" className="py-24 sm:py-32 px-6" style={{ background: "var(--graphite)", color: "var(--bone)" }}>
@@ -58,27 +43,6 @@ export default function Contact() {
               <p style={{ fontSize: "15px", color: "var(--bone)" }}>
                 Toronto, Ontario, Canada
               </p>
-            </div>
-
-            <div>
-              <p className="tracking-widest uppercase mb-3"
-                 style={{ fontSize: "10px", color: "rgba(244,241,235,0.5)", letterSpacing: "0.15em" }}>
-                Elsewhere
-              </p>
-              <div className="flex flex-wrap gap-6">
-                {socials.map((s) => (
-                  <a
-                    key={s.label}
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="line-button"
-                    style={{ fontSize: "14px", fontWeight: 600, color: "var(--bone)" }}
-                  >
-                    {s.label}
-                  </a>
-                ))}
-              </div>
             </div>
 
             <a

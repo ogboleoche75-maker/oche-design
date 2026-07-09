@@ -1,6 +1,29 @@
 import Image from "next/image";
 
-const projects = [
+type Project = {
+  id: number;
+  number: string;
+  title: string;
+  category: string;
+  tags: string[];
+  description: string;
+  problem: string;
+  approach: string;
+  outcome: string;
+  href: string;
+  year: string;
+  status: string;
+  proof: string;
+  tone: string;
+  image?: {
+    src: string;
+    alt: string;
+    kind: "desktop" | "mobile";
+  };
+  screenshots?: string[];
+};
+
+const projects: Project[] = [
   {
     id: 1,
     number: "001",
@@ -114,19 +137,24 @@ const projects = [
   {
     id: 3,
     number: "006",
-    title: "Mobile Banking App",
+    title: "FireFix Bank",
     category: "Fintech · Mobile Product",
     tags: ["Figma", "Mobile UX", "Fintech", "UI Design"],
     description:
-      "Designed a clean, intuitive mobile banking experience focused on simplicity and trust. Covers core flows including account overview, transfers, and transaction history.",
+      "Designed a clean, intuitive digital banking concept focused on simplicity and trust. Covers core flows including account overview, transfers, and transaction history.",
     problem: "Many banking apps overwhelm users with features on the home screen. New users struggle to find basic actions like checking their balance or sending money.",
     approach: "Prioritized the three things users do most: check balance, send money, and view recent transactions. Stripped away visual clutter and used clear hierarchy to guide each action.",
     outcome: "A focused banking concept that puts everyday tasks front and center, reducing the steps needed for the most common flows.",
-    href: "https://www.behance.net/ocheogbole71",
+    href: "https://www.behance.net/gallery/148354447/Money-Mobile-banking-application",
     year: "2024",
     status: "Concept",
-    proof: "Design concept",
-    tone: "#0f2b1a",
+    proof: "Behance case study",
+    tone: "#f3d8fd",
+    image: {
+      src: "/work/firefix-bank/hero.jpg",
+      alt: "FireFix Bank mobile banking app display image",
+      kind: "desktop",
+    },
   },
 ];
 
